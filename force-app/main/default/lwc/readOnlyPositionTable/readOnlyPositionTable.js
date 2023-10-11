@@ -7,13 +7,14 @@ export default class ReadOnlyPositionTable extends LightningElement {
     filteredPositions = [];
     columns = [
         { label: 'Job Name', fieldName: 'Name', type: 'text' },
-        { label: 'Status', fieldName: 'Status__c', type: 'text' },
+        { label: 'Status', fieldName: 'Status__c', type: 'text', editable: 'true' },
         { label: 'Open Date', fieldName: 'Opening_Date__c', type: 'date' },
         { label: 'Close Date', fieldName: 'CloseDate__c', type: 'date' },
         { label: 'Max Pay', fieldName: 'Max_Pay__c', type: 'currency' },
         { label: 'Min Pay', fieldName: 'Min_Pay__c', type: 'currency' },
-        
+        // Add additional columns for other fields
     ];
+    
 
     @wire(getPositions)
     wiredPositions({ error, data }) {
@@ -38,6 +39,6 @@ export default class ReadOnlyPositionTable extends LightningElement {
     }
 
     handleSaveClick() {
-       
+        // Handle save functionality if needed
     }
 }
