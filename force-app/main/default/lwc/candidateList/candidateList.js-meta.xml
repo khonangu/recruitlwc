@@ -2,11 +2,9 @@
 <LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>52.0</apiVersion>
     <isExposed>true</isExposed>
-     <targets>
+    <targets>
         <target>lightning__AppPage</target>
         <target>lightning__RecordPage</target>
         <target>lightning__HomePage</target>
     </targets>
-    <masterLabel>Pagination Component</masterLabel>
-    <description>A reusable Pagination component for handling pagination.</description>
 </LightningComponentBundle>

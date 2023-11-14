@@ -1,0 +1,21 @@
+/* Add padding and shadow to the card */
+.slds-card {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.12);
+    padding: 10px;
+}
+
+/* Apply hover effect */
+.slds-card:hover {
+    background-color: #f4f6f9;
+    cursor: pointer;
+}
+
+/* Style the clickable link */
+.slds-text-heading_small a {
+    color: #0070d2;
+    text-decoration: none;
+}
+
+.slds-text-heading_small a:hover {
+    text-decoration: underline;
+}

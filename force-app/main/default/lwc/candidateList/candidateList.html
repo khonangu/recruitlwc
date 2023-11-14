@@ -1,0 +1,47 @@
+<template>
+    <lightning-card title="Candidates for Position" icon-name="custom:custom14">
+        <div class="slds-m-around_medium">
+            <template for:each={candidates} for:item="candidate">
+                <div key={candidate.Id} class="slds-p-around_medium slds-card">
+                    <div class="slds-text-heading_small">
+                        <a href="javascript:void(0);" onclick={showCandidateModal} data-id={candidate.Id}>{candidate.Applicant_Name__c}</a>
+                    </div>
+                    <div class="slds-text-body_small">Position Name: {candidate.Name}</div>
+                    <div class="slds-text-body_small">Status: {candidate.Status__c}</div>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+
+    <!-- Candidate Modal -->
+    <div class={modalClass}>
+        <!-- Modal content goes here -->
+        <div class="slds-modal__container">
+            <!-- Modal header -->
+            <header class="slds-modal__header">
+                <h2 class="slds-text-heading_medium">Candidate Details</h2>
+            </header>
+            <!-- Modal body -->
+            <div class="slds-modal__content slds-p-around_medium">
+                <!-- Display detailed information here -->
+                <!-- Modal body -->
+                <div class="slds-modal__content slds-p-around_medium">
+                    <div class="slds-text-heading_small">Candidate Details</div>
+                    <div class="slds-text-body_small">Position Name: {modalCandidateDetails.Name}</div>
+                    <div class="slds-text-body_small">Email: {modalCandidateDetails.Email_Address__c}</div>
+                    <div class="slds-text-body_small">Number Of Reviews: {modalCandidateDetails.Number_of_Reviews__c}</div>
+                    <div class="slds-text-body_small">Status: {modalCandidateDetails.Status__c}</div>
+                    <!-- Add other candidate fields here -->
+                </div>
+                <!-- Add other candidate fields here -->
+            </div>
+            <!-- Modal footer with a close button -->
+            <footer class="slds-modal__footer">
+                <lightning-button label="Close" variant="neutral" onclick={closeCandidateModal}></lightning-button>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Include the CSS file path here -->
+   
+</template>

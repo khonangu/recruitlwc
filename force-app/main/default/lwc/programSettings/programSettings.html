@@ -1,0 +1,41 @@
+<!-- programSettings.html -->
+<template>
+    <lightning-card title="Program Settings">
+        <div class="slds-m-around_medium">
+            <!-- Field Set Selection for Candidates (Tiles) -->
+            <lightning-combobox
+                label="Field Set for Candidates (Tiles)"
+                value={selectedCandidateFieldSet}
+                options={candidateFieldSetOptions}
+                onchange={handleCandidateFieldSetChange}
+            >
+            </lightning-combobox>
+
+            <!-- Field Set Selection for Candidates (Modal) -->
+            <lightning-combobox
+                label="Field Set for Candidates (Modal)"
+                value={selectedModalFieldSet}
+                options={modalFieldSetOptions}
+                onchange={handleModalFieldSetChange}
+            >
+            </lightning-combobox>
+
+            <!-- Field Set Selection for Job Applications -->
+            <lightning-combobox
+                label="Field Set for Job Applications"
+                value={selectedJobAppFieldSet}
+                options={jobAppFieldSetOptions}
+                onchange={handleJobAppFieldSetChange}
+            >
+            </lightning-combobox>
+
+            <!-- Show Inaccessible Fields -->
+            <lightning-input type="checkbox" label="Show Inaccessible Fields" checked={showInaccessibleFields} onchange={handleShowInaccessibleFieldsChange}></lightning-input>
+
+            <!-- Save Button -->
+            <div class="slds-m-top_small">
+                <lightning-button variant="brand" label="Save Settings" onclick={handleSaveSettings}></lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+</template>

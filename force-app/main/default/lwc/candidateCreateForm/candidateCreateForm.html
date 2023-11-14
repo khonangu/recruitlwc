@@ -1,0 +1,20 @@
+<template>
+   <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open">
+       <div class="slds-modal__container">
+           <header class="slds-modal__header">
+               <h2 class="slds-text-heading_medium">New Candidate</h2>
+           </header>
+           <div class="slds-modal__content slds-p-around_medium">
+               <!-- Your form fields here -->
+               <lightning-input label="First Name" value={firstName} onchange={handleFirstNameChange}></lightning-input>
+               <lightning-input label="Last Name" value={lastName} onchange={handleLastNameChange}></lightning-input>
+               <!-- Add more fields as needed -->
+           </div>
+           <footer class="slds-modal__footer">
+               <button class="slds-button slds-button_neutral" onclick={handleCancelClick}>Cancel</button>
+               <button class="slds-button slds-button_brand" onclick={handleSaveClick}>Save</button>
+           </footer>
+       </div>
+   </section>
+   <div class="slds-backdrop slds-backdrop_open"></div>
+</template>
